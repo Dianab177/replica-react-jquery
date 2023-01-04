@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Typography, ThemeProvider } from '@mui/material';
+import {ThemeProvider } from "@mui/material";
 import { styled } from '@mui/system';
 import { green, purple, red } from '@mui/material/colors';
-import {theme} from './mediaQuerys/mediaQuerys';
+import { theme } from './mediaQuerys/mediaQuerys';
 
 const Responsive = styled('div')(({theme}) => ({
 [theme.breakpoints.up('mobile')]: {
@@ -33,8 +33,29 @@ export default function App() {
     <ThemeProvider theme={theme}>
     <div className="App">
       <Responsive className="App-header">
-      <Typography variant='h4'>Réplica React Mediaquery</Typography>
-      <Typography variant='h4'>{w} px</Typography>
+      <p>Réplica React Mediaquery</p>
+      <p>{w} px</p>
+      <p sx={
+        {display: {
+          tablet: 'none'
+        }}
+      }>Mobile
+      </p>
+      <p sx={
+        {display: {
+          mobile: 'none',
+          tablet: 'block',
+          desktop: 'none'
+        }}
+      }>Tablet</p>
+      <p
+      sx={
+        {display: {
+          mobile: 'none',
+          tablet: 'none',
+          desktop: 'block'
+        }}
+      }>Desktop</p>
       </Responsive>
     </div>
     </ThemeProvider>
