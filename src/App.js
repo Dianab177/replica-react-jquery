@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import {ThemeProvider } from "@mui/material";
+import {ThemeProvider} from "@mui/material";
+import Typography from '@mui/material/Typography';
 import { styled } from '@mui/system';
 import { green, purple, red } from '@mui/material/colors';
 import { theme } from './mediaQuerys/mediaQuerys';
@@ -33,29 +34,29 @@ export default function App() {
     <ThemeProvider theme={theme}>
     <div className="App">
       <Responsive className="App-header">
-      <p>Réplica React Mediaquery</p>
-      <p>{w} px</p>
-      <p sx={
+      <Typography variant=''>Réplica React Mediaquery</Typography>
+      <Typography variant=''>{w} px</Typography>
+      <Typography variant='' sx={
         {display: {
           tablet: 'none'
         }}
       }>Mobile
-      </p>
-      <p sx={
+      </Typography>
+      <Typography variant='' sx={
         {display: {
           mobile: 'none',
           tablet: 'block',
           desktop: 'none'
         }}
-      }>Tablet</p>
-      <p
+      }>Tablet</Typography>
+      <Typography variant=''
       sx={
         {display: {
           mobile: 'none',
           tablet: 'none',
           desktop: 'block'
         }}
-      }>Desktop</p>
+      }>Desktop</Typography>
       </Responsive>
     </div>
     </ThemeProvider>
