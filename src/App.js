@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/system';
 import { green, purple, red } from '@mui/material/colors';
 import { theme } from './mediaQuerys/mediaQuerys';
+import ButtonJoin from './button/ButtonJoin';
 
 const Responsive = styled('div')(({theme}) => ({
 [theme.breakpoints.up('mobile')]: {
@@ -34,7 +35,9 @@ export default function App() {
     <ThemeProvider theme={theme}>
     <div className="App">
       <Responsive className="App-header">
-      <Typography variant=''>Réplica React Mediaquery</Typography>
+      <Typography variant=''>Feel The Music</Typography>
+      <Typography variant=''>Stream over 20 thousand songs with one click</Typography>
+      <ButtonJoin props = 'Join Now'/>
       <Typography variant=''>{w} px</Typography>
       <Typography variant='' sx={
         {display: {
